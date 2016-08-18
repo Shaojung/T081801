@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onDraw(Canvas canvas) {
             super.onDraw(canvas);
+            canvas.drawPath( mPath,  mPaint);
         }
 
         @Override
@@ -74,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             // commit the path to our offscreen
             mCanvas.drawPath(mPath,  mPaint);
             // kill this so we don't double draw
-            mPath.reset();
+            // mPath.reset();
         }
         @Override
         public boolean onTouchEvent(MotionEvent event) {
